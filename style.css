@@ -42,7 +42,6 @@ input {
   border: none;
   outline: none;
   background: transparent;
-  /* FIXME: remove border on atcive state */
 }
 .display-flex {
   display: flex;
