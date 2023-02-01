@@ -1,3 +1,14 @@
+:root {
+  /* CSS HEX */
+  --sky-blue-crayola: #52c9dcff;
+  --powder-blue: #b4dde5ff;
+  --alice-blue: #f2f8fbff;
+  --raisin-black: #1e2435ff;
+  --jet: #2f313cff;
+  --raisin-black-2: #1a1b28ff;
+  --alice-blue-2: #f2f8fcff;
+}
+
 /* || RESET */
 * {
   padding: 0;
@@ -7,7 +18,7 @@
 body {
   display: grid;
   place-content: center;
-  background: red;
+  background: var(--powder-blue);
   min-height: 100vh;
   font-size: 16px;
 }
@@ -17,7 +28,7 @@ main {
   padding: 0 1rem 1rem 1rem;
   width: 25rem;
   height: 39rem;
-  background: gray;
+  background: var(--raisin-black-2);
 }
 .display {
   height: 40%;
@@ -40,7 +51,7 @@ input {
 .equals-sign {
   display: grid;
   place-content: center;
-  color: green;
+  color: var(--sky-blue-crayola);
   width: 10%;
   font-size: 3rem;
   font-weight: 900;
@@ -54,7 +65,7 @@ input {
 .display .solution {
   height: 20%;
   font-size: 1.5rem;
-  background: yellow;
+  /* background: yellow; */
 }
 .buttons {
   height: 60%;
@@ -71,13 +82,13 @@ input {
 .button {
   flex: 1;
   color: #fff;
-  background: ;
+  background: var(--raisin-black);
   border: none;
   margin: 0.3rem;
   border-radius: 0.3rem;
   font-size: 1.5rem;
 }
 .functions {
-  background: orange;
+  background: var(--sky-blue-crayola);
   color: #fff;
 }
