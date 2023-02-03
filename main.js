@@ -16,3 +16,9 @@ operationKeys.forEach((key) =>
     (e) => (operationDisplay.value += e.target.value)
   )
 );
+
+// || CLEAR FUNCTION
+const clear = () => {
+  (operationDisplay.value = ""), (solutionDisplay.value = "");
+};
+clearKey.addEventListener("click", () => clear());
