@@ -22,3 +22,9 @@ const clear = () => {
   (operationDisplay.value = ""), (solutionDisplay.value = "");
 };
 clearKey.addEventListener("click", () => clear());
+
+// || EVALUATION FUNCTION
+const evaluate = () => {
+  solutionDisplay.value = eval(operationDisplay.value);
+};
+equalsKey.addEventListener("click", () => evaluate());
