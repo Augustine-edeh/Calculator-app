@@ -49,7 +49,7 @@ input {
   width: 100%;
 }
 .equals-sign {
-  display: grid;
+  display: none;
   place-content: center;
   color: var(--sky-blue-crayola);
   width: 10%;

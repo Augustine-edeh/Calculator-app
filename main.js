@@ -17,15 +17,33 @@ operationKeys.forEach((key) =>
   )
 );
 
+const equalsSign = document.querySelector(".equals-sign");
+
+// || SHOW EQUALS_SIGN FUNCTION
+const showEqualsSign = () => {
+  if (equalsSign.style.display != "grid") {
+    equalsSign.style.display = "grid";
+  }
+};
+
+// || HIDE EQUALS_SIGN FUNCTION
+const hideEqualsSign = () => {
+  if (equalsSign.style.display != "none") {
+    equalsSign.style.display = "none";
+  }
+};
+
 // || CLEAR FUNCTION
 const clear = () => {
   (operationDisplay.value = ""), (solutionDisplay.value = "");
+  hideEqualsSign();
 };
 clearKey.addEventListener("click", () => clear());
 
 // || EVALUATION FUNCTION
 const evaluate = () => {
   solutionDisplay.value = eval(operationDisplay.value);
+  showEqualsSign();
 };
 equalsKey.addEventListener("click", () => evaluate());
 
@@ -35,5 +53,6 @@ const del = () => {
   if (operationDisplay.value.length !== 0) {
     operationDisplay.value = operationDisplay.value.slice(0, -1);
   }
+  hideEqualsSign();
 };
 deleteKey.addEventListener("click", () => del());
