@@ -52,7 +52,6 @@ input {
   display: none;
   place-content: center;
   color: var(--sky-blue-crayola);
-  width: 10%;
   font-size: 3rem;
   font-weight: 900;
   margin-left: 0.3rem;
@@ -60,7 +59,6 @@ input {
 .display .solution {
   height: 100%;
   font-size: 3.5rem;
-  width: 90%;
 }
 .display .operation {
   height: 20%;
