@@ -57,12 +57,12 @@ input {
   font-weight: 900;
   margin-left: 0.3rem;
 }
-.display .operation {
+.display .solution {
   height: 100%;
   font-size: 3.5rem;
   width: 90%;
 }
-.display .solution {
+.display .operation {
   height: 20%;
   font-size: 1.5rem;
 }
@@ -86,7 +86,8 @@ input {
   border-radius: 0.3rem;
   font-size: 1.5rem;
 }
-.functions {
+.function,
+.operator-key {
   background: var(--sky-blue-crayola);
   color: #fff;
 }
