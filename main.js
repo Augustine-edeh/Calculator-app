@@ -42,8 +42,34 @@ clearKey.addEventListener("click", () => clear());
 
 // || EVALUATION FUNCTION
 const evaluate = () => {
-  solutionDisplay.value = eval(operationDisplay.value);
+  const replacementFunc = (operator) => {
+    // if (operator == "&plus;") {
+    //   return "PLUS!";
+    // } else {
+    //   console.log(operator);
+    //   return " Negative! ";
+    // }
+    // if operator  == "−"
+    // return "MINUS! "
+    // if operator == "÷"
+    // return "DIVIDE! "
+
+    // |\+|−|÷
+    console.log(operator);
+    return operator;
+    // console.log("Yes!");
+  };
+
+  // let processedAnswer = operationDisplay.value.replace(
+  //   /\+.*×.*\+.*−.*×.*\+.*−.*÷.*×.*−.*÷/gi,
+  //   replacementFunc()
+  // );
+
+  let answer = operationDisplay.value.replace("+", replacementFunc($&));
+  console.log(answer);
+
   showEqualsSign();
+  // solutionDisplay.value = eval(operationDisplay.value);
 };
 equalsKey.addEventListener("click", () => evaluate());
 
@@ -51,8 +77,8 @@ equalsKey.addEventListener("click", () => evaluate());
 const deleteKey = document.querySelector(".delete-key");
 const del = () => {
   if (operationDisplay.value.length !== 0) {
+    hideEqualsSign();
     operationDisplay.value = operationDisplay.value.slice(0, -1);
   }
-  hideEqualsSign();
 };
 deleteKey.addEventListener("click", () => del());
