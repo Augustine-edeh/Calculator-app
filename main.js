@@ -70,7 +70,7 @@ const evaluate = () => {
 
   let answer = operationDisplay.value.replace(
     /(\+)|(−)|(×)|(÷)|(%)|(²)/gi,
-    function replacer($$) {
+    ($$) => {
       if ($$ == "+") {
         return $$;
       }
