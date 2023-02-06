@@ -55,8 +55,11 @@ const evaluate = () => {
     // return "DIVIDE! "
 
     // |\+|−|÷
-    console.log(operator);
-    return operator;
+    console.log("Opeators matched: " + operator);
+    if (operator == "$&") {
+      console.log("Yes true!");
+      return `hello `;
+    }
     // console.log("Yes!");
   };
 
@@ -65,11 +68,39 @@ const evaluate = () => {
   //   replacementFunc()
   // );
 
-  let answer = operationDisplay.value.replace("+", replacementFunc($&));
-  console.log(answer);
+  let answer = operationDisplay.value.replace(
+    /(\+)|(−)|(×)|(÷)|(%)|(²)/gi,
+    function replacer($$) {
+      if ($$ == "+") {
+        return $$;
+      }
+      if ($$ == "−") {
+        return "-";
+      }
+      if ($$ == "×") {
+        return "*";
+      }
+      if ($$ == "÷") {
+        return "/";
+      }
+      if ($$ == "%") {
+        return "percent";
+      }
+      if ($$ == "²") {
+        return "**2";
+      }
+      console.log($$);
+      // return ` Edeh!: **`;
+    }
+  );
+
+  console.log("Answer value: " + answer);
+  console.log("Processed answer: " + eval(answer));
+
+  // console.log("Test results: " + /\+/gi.test(operationDisplay.value));
 
   showEqualsSign();
-  // solutionDisplay.value = eval(operationDisplay.value);
+  solutionDisplay.value = eval(answer);
 };
 equalsKey.addEventListener("click", () => evaluate());
 
