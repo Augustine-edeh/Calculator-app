@@ -42,32 +42,6 @@ clearKey.addEventListener("click", () => clear());
 
 // || EVALUATION FUNCTION
 const evaluate = () => {
-  const replacementFunc = (operator) => {
-    // if (operator == "&plus;") {
-    //   return "PLUS!";
-    // } else {
-    //   console.log(operator);
-    //   return " Negative! ";
-    // }
-    // if operator  == "−"
-    // return "MINUS! "
-    // if operator == "÷"
-    // return "DIVIDE! "
-
-    // |\+|−|÷
-    console.log("Opeators matched: " + operator);
-    if (operator == "$&") {
-      console.log("Yes true!");
-      return `hello `;
-    }
-    // console.log("Yes!");
-  };
-
-  // let processedAnswer = operationDisplay.value.replace(
-  //   /\+.*×.*\+.*−.*×.*\+.*−.*÷.*×.*−.*÷/gi,
-  //   replacementFunc()
-  // );
-
   let answer = operationDisplay.value.replace(
     /(\+)|(−)|(×)|(÷)|(%)|(²)/gi,
     ($$) => {
@@ -89,16 +63,8 @@ const evaluate = () => {
       if ($$ == "²") {
         return "**2";
       }
-      console.log($$);
-      // return ` Edeh!: **`;
     }
   );
-
-  console.log("Answer value: " + answer);
-  console.log("Processed answer: " + eval(answer));
-
-  // console.log("Test results: " + /\+/gi.test(operationDisplay.value));
-
   showEqualsSign();
   solutionDisplay.value = eval(answer);
 };
