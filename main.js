@@ -66,9 +66,31 @@ const evaluate = () => {
     }
   );
   showEqualsSign();
+  restoreOpacity();
   solutionDisplay.value = eval(answer);
 };
 equalsKey.addEventListener("click", () => evaluate());
+
+// || REDUCE OPACITY FUNCTION
+const reduceOpacity = () => {
+  // let isDim = false;
+  // if (isDim === false) {
+  document.querySelector(".solution").style.opacity = "0.5";
+  // isDim = true;
+  // }
+
+  // if (isDim === true) {
+  //   document.querySelector(".solution").style.opacity = "1";
+  //   isDim = false;
+  // }
+};
+
+const restoreOpacity = () => {
+  // if (isDim === false) {
+  document.querySelector(".solution").style.opacity = "1";
+  // isDim = true;
+  // }
+};
 
 // || DELETE FUNCTION
 const deleteKey = document.querySelector(".delete-key");
@@ -77,5 +99,7 @@ const del = () => {
     hideEqualsSign();
     operationDisplay.value = operationDisplay.value.slice(0, -1);
   }
+
+  reduceOpacity();
 };
 deleteKey.addEventListener("click", () => del());
