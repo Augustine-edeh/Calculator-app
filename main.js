@@ -73,11 +73,11 @@ equalsKey.addEventListener("click", () => evaluate());
 
 // || REDUCE OPACITY FUNCTION
 const reduceOpacity = () => {
-  document.querySelector(".solution").style.opacity = "0.5";
+  solutionDisplay.style.opacity = "0.5";
 };
 
 const restoreOpacity = () => {
-  document.querySelector(".solution").style.opacity = "1";
+  solutionDisplay.style.opacity = "1";
 };
 
 // || DELETE FUNCTION
