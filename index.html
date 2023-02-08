@@ -5,9 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <!-- || GOOGLE FONT LINK -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <title>Calculator App</title>
   </head>
   <body>
+    <!-- <div class="material-symbols-outlined" id="theme-toggler">light_mode</div> -->
+    <img
+      src="./Images/sun-regular.svg"
+      alt="Theme toggle icon"
+      id="theme-toggler"
+    />
     <main>
       <section class="display">
         <div class="display-flex">
@@ -45,7 +56,9 @@
         <div class="row row5">
           <button class="button operand-key" value="0">0</button>
           <button class="button operand-key" value=".">.</button>
-          <button class="button delete-key" value="">&leftarrow;</button>
+          <button class="button operand-key delete-key" value="">
+            &leftarrow;
+          </button>
           <button class="button equals-key function" value="">&equals;</button>
         </div>
       </section>

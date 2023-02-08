@@ -1,5 +1,6 @@
 const operationDisplay = document.querySelector(".operation"),
-  solutionDisplay = document.querySelector(".solution");
+  solutionDisplay = document.querySelector(".solution"),
+  inputs = [operationDisplay, solutionDisplay];
 
 const operandKeys = [...document.querySelectorAll(".operand-key")],
   operatorKeys = [...document.querySelectorAll(".operator-key")];
@@ -8,6 +9,24 @@ const operationKeys = [...operandKeys, ...operatorKeys];
 
 const clearKey = document.querySelector(".reset-key");
 const equalsKey = document.querySelector(".equals-key");
+
+const themeToggler = document.querySelector("#theme-toggler");
+
+// || CHANGE THEME FUNCTION
+const changeTheme = () => {
+  document.body.classList.toggle("light-theme");
+
+  if (document.body.classList.contains("light-theme")) {
+    themeToggler.src = "./Images/moon-solid.svg";
+    operandKeys.forEach((key) => (key.style.color = "#000"));
+    inputs.forEach((input) => (input.style.color = "#000"));
+  } else {
+    themeToggler.src = "./Images/sun-regular.svg";
+    operandKeys.forEach((key) => (key.style.color = "#fff"));
+    inputs.forEach((input) => (input.style.color = "#fff"));
+  }
+};
+themeToggler.addEventListener("click", changeTheme);
 
 // || ADDING EVENT LISTENER FOR ALL OPERATION-KEYS
 operationKeys.forEach((key) =>

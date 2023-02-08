@@ -1,12 +1,20 @@
 :root {
   /* CSS HEX */
-  --sky-blue-crayola: #52c9dcff;
-  --powder-blue: #b4dde5ff;
+  --function-keys: #52c9dcff;
+  --body: #b4dde5ff;
   --alice-blue: #f2f8fbff;
-  --raisin-black: #1e2435ff;
+  --numeric-keys: #1e2435ff;
   --jet: #2f313cff;
-  --raisin-black-2: #1a1b28ff;
+  --calculator-container: #1a1b28ff;
   --alice-blue-2: #f2f8fcff;
+}
+
+.light-theme {
+  /* CSS HEX */
+  --function-keys: #52c9dcff;
+  --body: #2f313cff;
+  --numeric-keys: #f2f8fbff;
+  --calculator-container: #fff;
 }
 
 /* || RESET */
@@ -18,9 +26,18 @@
 body {
   display: grid;
   place-content: center;
-  background: var(--powder-blue);
+  background: var(--body);
   min-height: 100vh;
   font-size: 16px;
+}
+#theme-toggler {
+  position: absolute;
+  top: 0.6rem;
+  right: 1.5rem;
+  /* background: red; */
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
 }
 main {
   display: flex;
@@ -28,7 +45,7 @@ main {
   padding: 0 1rem 1rem 1rem;
   width: 25rem;
   height: 39rem;
-  background: var(--raisin-black-2);
+  background: var(--calculator-container);
 }
 .display {
   height: 40%;
@@ -51,7 +68,7 @@ input {
 .equals-sign {
   display: none;
   place-content: center;
-  color: var(--sky-blue-crayola);
+  color: var(--function-keys);
   font-size: 3rem;
   font-weight: 900;
   margin-left: 0.3rem;
@@ -78,7 +95,7 @@ input {
 .button {
   flex: 1;
   color: #fff;
-  background: var(--raisin-black);
+  background: var(--numeric-keys);
   border: none;
   margin: 0.3rem;
   border-radius: 0.3rem;
@@ -86,6 +103,6 @@ input {
 }
 .function,
 .operator-key {
-  background: var(--sky-blue-crayola);
+  background: var(--function-keys);
   color: #fff;
 }
