@@ -14,16 +14,16 @@ const themeToggler = document.querySelector("#theme-toggler");
 
 // || CHANGE THEME (Dark-Light Mode) FUNCTION
 const changeTheme = () => {
-  document.body.classList.toggle("light-theme");
+  document.body.classList.toggle("dark-theme");
 
-  if (document.body.classList.contains("light-theme")) {
-    themeToggler.src = "./Images/moon-solid.svg";
-    operandKeys.forEach((key) => (key.style.color = "#000"));
-    inputs.forEach((input) => (input.style.color = "#000"));
-  } else {
+  if (document.body.classList.contains("dark-theme")) {
     themeToggler.src = "./Images/sun.png";
     operandKeys.forEach((key) => (key.style.color = "#fff"));
     inputs.forEach((input) => (input.style.color = "#fff"));
+  } else {
+    themeToggler.src = "./Images/moon-solid.svg";
+    operandKeys.forEach((key) => (key.style.color = "#000"));
+    inputs.forEach((input) => (input.style.color = "#000"));
   }
 };
 themeToggler.addEventListener("click", changeTheme);

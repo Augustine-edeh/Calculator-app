@@ -1,22 +1,22 @@
 :root {
   /* CSS HEX */
   --function-keys: #52c9dcff;
-  --body: #2f313cff;
-  --numeric-keys: #1e2435ff;
-  --calculator-container: #1a1b28ff;
-  --border-top: #1d2232;
+  --body: #b4dde5ff;
+  --numeric-keys: #f2f8fbff;
+  --calculator-container: #fff;
+  --border-top: #f4f9fc;
   --alice-blue: #f2f8fbff;
   --jet: #2f313cff;
   --alice-blue-2: #f2f8fcff;
 }
 
-.light-theme {
-  /* CSS HEX */
+.dark-theme {
   --function-keys: #52c9dcff;
-  --body: #b4dde5ff;
-  --numeric-keys: #f2f8fbff;
-  --calculator-container: #fff;
-  --border-top: #f4f9fc;
+  --body: #2f313cff;
+  --numeric-keys: #1e2435ff;
+  --calculator-container: #1a1b28ff;
+  --border-top: #1d2232;
+  /* CSS HEX */
 }
 
 /* || RESET */
@@ -96,7 +96,7 @@ input {
 }
 .buttons {
   flex: 1;
-  color: #fff;
+  color: #000;
   background: var(--numeric-keys);
   border: none;
   margin: 0.3rem;
