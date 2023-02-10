@@ -110,3 +110,27 @@ input {
   background: var(--function-keys);
   color: #fff;
 }
+
+/* || MOBILE DEVICE BREAKPOINT */
+@media (max-width: 376px) {
+  main {
+    width: 20rem;
+    height: 35rem;
+  }
+  #theme-toggler {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .display-flex {
+    height: 70%;
+  }
+  .display .solution {
+    font-size: 3.1rem;
+  }
+  .display .operation {
+    height: 30%;
+    font-size: 1.35rem;
+  }
+}
