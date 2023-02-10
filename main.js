@@ -21,7 +21,7 @@ const changeTheme = () => {
     operandKeys.forEach((key) => (key.style.color = "#000"));
     inputs.forEach((input) => (input.style.color = "#000"));
   } else {
-    themeToggler.src = "./Images/sun-regular.svg";
+    themeToggler.src = "./Images/sun.png";
     operandKeys.forEach((key) => (key.style.color = "#fff"));
     inputs.forEach((input) => (input.style.color = "#fff"));
   }
