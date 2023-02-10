@@ -1,7 +1,7 @@
 :root {
   /* CSS HEX */
   --function-keys: #52c9dcff;
-  --body: #b4dde5ff;
+  --body: #2f313cff;
   --alice-blue: #f2f8fbff;
   --numeric-keys: #1e2435ff;
   --jet: #2f313cff;
@@ -12,7 +12,7 @@
 .light-theme {
   /* CSS HEX */
   --function-keys: #52c9dcff;
-  --body: #2f313cff;
+  --body: #b4dde5ff;
   --numeric-keys: #f2f8fbff;
   --calculator-container: #fff;
 }

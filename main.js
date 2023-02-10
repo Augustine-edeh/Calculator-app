@@ -12,7 +12,7 @@ const equalsKey = document.querySelector(".equals-key");
 
 const themeToggler = document.querySelector("#theme-toggler");
 
-// || CHANGE THEME FUNCTION
+// || CHANGE THEME (Dark-Light Mode) FUNCTION
 const changeTheme = () => {
   document.body.classList.toggle("light-theme");
 
