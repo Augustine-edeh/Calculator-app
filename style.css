@@ -2,10 +2,11 @@
   /* CSS HEX */
   --function-keys: #52c9dcff;
   --body: #2f313cff;
-  --alice-blue: #f2f8fbff;
   --numeric-keys: #1e2435ff;
-  --jet: #2f313cff;
   --calculator-container: #1a1b28ff;
+  --border-top: #1d2232;
+  --alice-blue: #f2f8fbff;
+  --jet: #2f313cff;
   --alice-blue-2: #f2f8fcff;
 }
 
@@ -15,6 +16,7 @@
   --body: #b4dde5ff;
   --numeric-keys: #f2f8fbff;
   --calculator-container: #fff;
+  --border-top: #f4f9fc;
 }
 
 /* || RESET */
@@ -80,6 +82,7 @@ input {
 .display .operation {
   height: 20%;
   font-size: 1.5rem;
+  border-top: 0.063rem solid var(--border-top);
 }
 .buttons-section {
   height: 60%;
