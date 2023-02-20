@@ -90,6 +90,14 @@ const evaluate = () => {
 
   const errorChecker = (ans) => {
     try {
+      if (!ans) {
+        // || REDUCING FONT SIZE OF SOLUTION-DISPLAY TO ACCOMMODATE ERROR MESSAGE
+        solutionDisplay.style.fontSize = "2rem";
+        return "Empty operation";
+        // throw error("Enter a operation");
+      }
+      // || RESTORING FONT SIZE OF SOLUTION-DISPLAY TO NORMAL
+      solutionDisplay.style.fontSize = "3.5rem";
       return eval(ans);
     } catch (error) {
       window.navigator.vibrate(200);
