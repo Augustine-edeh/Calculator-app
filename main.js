@@ -92,6 +92,7 @@ const evaluate = () => {
     try {
       return eval(ans);
     } catch (error) {
+      window.navigator.vibrate(200);
       return "Error";
     }
   };
