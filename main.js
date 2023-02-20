@@ -87,7 +87,16 @@ const evaluate = () => {
   );
   showEqualsSign();
   restoreOpacity();
-  solutionDisplay.value = eval(answer);
+
+  const errorChecker = (ans) => {
+    try {
+      return eval(ans);
+    } catch (error) {
+      return "Error";
+    }
+  };
+
+  solutionDisplay.value = errorChecker(answer);
 };
 equalsKey.addEventListener("click", () => evaluate());
 
