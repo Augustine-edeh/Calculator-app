@@ -110,7 +110,7 @@ input {
 }
 
 /* || MOBILE DEVICE BREAKPOINT */
-@media (max-width: 376px) {
+@media (min-width: 300px) and (max-width: 400px) {
   main {
     width: 18rem;
     height: 38rem;
@@ -118,8 +118,26 @@ input {
   #theme-toggler {
     top: 0.5rem;
     right: 0.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
+  }
+  .display-flex {
+    height: 70%;
+  }
+  .display .solution {
+    font-size: 3.1rem;
+  }
+  .display .operation {
+    height: 30%;
+    font-size: 1.35rem;
+  }
+}
+@media (min-width: 400px) and (max-width: 800px) {
+  main {
+    width: 22.5rem;
+    height: 48rem;
+  }
+  #theme-toggler {
+    top: 0.5rem;
+    right: 0.5rem;
   }
   .display-flex {
     height: 70%;
