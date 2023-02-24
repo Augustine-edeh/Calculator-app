@@ -78,7 +78,7 @@ const evaluate = () => {
       }
       // || BROKEN LOGIC (LOGIC NOT WORKING)
       if ($$ == "%") {
-        return "percent";
+        return "*(0.01)";
       }
       if ($$ == "²") {
         return "**2";
