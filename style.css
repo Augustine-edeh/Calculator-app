@@ -132,8 +132,10 @@ input {
 }
 @media (min-width: 400px) and (max-width: 800px) {
   main {
-    width: 22.5rem;
-    height: 43rem;
+    /* width: 22.5rem; */
+    width: 90vw;
+    /* height: 45rem; */
+    height: 85vh;
   }
   #theme-toggler {
     top: 0.5rem;
