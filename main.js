@@ -97,6 +97,7 @@ const evaluate = () => {
         // || THE VIBRATE FUNCTION HERE ISN'T WORKING
         // || VIBRATE MOBILE DEVICES
         window.navigator.vibrate(200);
+        solutionDisplay.style.fontSize = "2rem";
         return "Empty operation";
         // throw error("Enter a operation");
       }
@@ -105,7 +106,8 @@ const evaluate = () => {
       return eval(ans);
     } catch (error) {
       window.navigator.vibrate(200);
-      return "Error";
+      solutionDisplay.style.fontSize = "1.8rem";
+      return "Malformed operation";
     }
   };
 
