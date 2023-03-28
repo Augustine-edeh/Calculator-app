@@ -93,6 +93,8 @@ const evaluate = () => {
       if (!ans) {
         // || REDUCING FONT SIZE OF SOLUTION-DISPLAY TO ACCOMMODATE ERROR MESSAGE
         solutionDisplay.style.fontSize = "2rem";
+
+        // || THE VIBRATE FUNCTION HERE ISN'T WORKING
         // || VIBRATE MOBILE DEVICES
         window.navigator.vibrate(200);
         return "Empty operation";
