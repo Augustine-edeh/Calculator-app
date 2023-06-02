@@ -112,8 +112,8 @@ input {
 /* || MOBILE DEVICE BREAKPOINT */
 @media (min-width: 300px) and (max-width: 400px) {
   main {
-    width: 18rem;
-    height: 38rem;
+    width: 85vw;
+    height: 80vh;
   }
   #theme-toggler {
     top: 0.5rem;
